@@ -21,7 +21,7 @@ LIB_ARC = lib$(LIB_NAME).a
 
 CXXFLAGS = -std=c++11 -g -Wall -fPIC
 CPPFLAGS = -I./include -I./include/cppkafka
-LINK_LIBS =-L./lib -L./bin/debug -lrdkafka -lboost_program_options  -lssl -lrt
+LINK_LIBS =-L./lib -L./bin/debug -lrdkafka -lboost_program_options  -lssl -lcrypto -lpthread -lz -ldl -lrt
 
 all: dir $(LIB_ARC) $(EXE_NAME)
 
