@@ -51,6 +51,7 @@ producer_example:examples/producer_example.o
 
 clean:
 	$(RM) $(LIB_OBJS) $(EXE_OBJS) $(EXE_OBJS)
-	$(RM) $(BIN_DIR)/$(EXE_NAME) $(BIN_DIR)/$(LIB_ARC)
+	$(RM) $(BIN_DIR)/$(LIB_ARC)
+	for x in $(EXE_NAME); do ($(RM) $(BIN_DIR)/$$x); done
 #
 #
